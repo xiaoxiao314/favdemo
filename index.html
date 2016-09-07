@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/player.css"/>
+    <link rel="stylesheet" href="css/enemy.css"/>
+</head>
+<body style="background-color: black">
+<div class="box w" id="box">
+
+    <div class="bf-ct-bgi w show" id="box_hide">
+        <button class="bf-ct-btn" onclick="this.style.display='none';gameStar();">新的回忆</button>
+        <div id="mark" class="mark">
+            <!--可以用JS做，滑动展开-->
+            <!--动态生成按钮-->
+        </div>
+    </div>
+    <div class="bg">
+        <div class="top"></div>
+        <div class="down"></div>
+    </div>
+    <div class="canves hide" id="canves">
+        <!--玩家-->
+        <div class="box-player">
+            <div class="player-img" id="player_img"></div>
+            <div class="player-blood">
+                <div class="player-bd" id="player_Hp"></div>
+            </div>
+            <div class="player-magic">
+                <a href="javascript:;"><div class="player-md" id="player_Mp"></div></a>
+            </div>
+        </div>
+        <div class="select hide" id="select">
+            <button class="btn1" onclick="player.attack()">攻击</button>
+            <!--<button class="btn1" onclick="player.magics(1)">攻击</button>-->
+            <button class="btn2" onclick="show(magic)">技能</button>
+            <button class="btn3" onclick="">防御</button>
+            <button class="btn4" onclick="">物品</button>
+        </div>
+        <!--分歧点，做原版，还是做自己-->
+        <!--目前路线：做自己-->
+        <!--敌人-->
+        <div class="box-enemy">
+            <div class="enemy-l show" id="enemyLeft">
+                <div class="enemy-blood">
+                    <div class="enemy-bd" id="enemy_Hpl"></div>
+                </div>
+                <div class="enemy-img" id="enemy_imgl">
+                </div>
+            </div>
+            <div class="enemy-boss"></div>
+            <div class="enemy-r" id="enemyRight">
+                <div class="enemy-img" id="enemy_imgr">
+                </div>
+                <div class="enemy-blood">
+                    <div class="enemy-bd" id="enemy_Hpr"></div>
+                </div>
+            </div>
+        </div>
+        <!--特效-->
+        <div class="boom">
+            <div class="boom-num1 hide" id="boom">
+            </div>
+        </div>
+        <!--语言框-->
+        <div class="talk hide" id="player_talk">
+            <div class="head-img" id="head_img"></div>
+            <div class="say" id="player_say"></div>
+        </div>
+        <div class="enemy-talk hide" id="enemy_talk">
+            <div class="enemy-head-img" id="enemy_head_img"></div>
+            <div class="enemy-say" id="enemy_say"></div>
+        </div>
+    </div>
+    <div class="magic hide" id="magic">
+        <ul>
+            <li><a href="javascript:;" title="MP消耗：50，造成2倍伤害" onclick="player.magics(1)">气刃连击</a></li>
+            <li><a href="javascript:;" title="MP消耗：100，造成5倍伤害" onclick="player.magics(2)">炸裂攻击</a></li>
+            <li><a href="javascript:;" title="MP消耗：80，回复80点HP" onclick="player.magics(3)">治愈之风</a></li>
+            <li><a href="javascript:;" onclick="hide(magic)">取消</a></li>
+        </ul>
+    </div>
+    <!--BGM-->
+    <div id="bgm"></div>
+</div>
+<script src="js/base.js"></script>
+</body>
+</html>
