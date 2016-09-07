@@ -1,0 +1,322 @@
+
+@charset "UTF-8";
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset, img, input, button { 			/*fieldset组合表单中的相关元素*/
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;				/*清除列表风格*/
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+/*防止多行文本框拖动*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+/*  去掉图片低测默认的3像素空白缝隙*/
+table {
+    border-collapse: collapse;			/*合并外边线*/
+}
+
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";	/*宋体，Unicode，统一码*/
+    color: #666;
+    background: #fff;
+    /*cursor: url(""),auto;*/
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+a {
+    color: #666;
+    text-decoration: none
+}
+
+a:hover {
+    color: #C81623;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+.col-red {
+    color: #C81623 !important;
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.al {
+    text-align: left
+}
+
+.ac {
+    text-align: center
+}
+
+.ar {
+    text-align: right
+}
+
+.show{
+    display: block;
+}
+
+.hide {
+    display: none
+}
+.w {
+    /*版心 提取 */
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/*初始化前*/
+.bf-ct-btn{
+    border: 1px solid #ffffff;
+    font: 30px "楷体";
+    background: rgba(255,255,255,.4);
+    position: absolute;
+    top: 400px;
+    left: 40%;
+    border-radius: 15px;
+    cursor: pointer;
+    z-index: 11;
+}
+.bf-ct-bgi{
+    width: 1000px;
+    height: 740px;
+    margin: 0 auto;
+    background: url(../images/Castle.png) no-repeat;
+    background-size: 1000px 740px;
+    position: relative;
+    z-index: 10;
+
+}
+.mark{
+    width: 1000px;
+    height: 740px;
+    background-color: black;
+    position: relative;
+    z-index: 10;
+    opacity:0;
+}
+/*初始化*/
+
+.top{
+    background: url("../images/Castle3.png");
+    width: 1000px;
+    height: 740px;
+    position: fixed;
+    top: 0;
+    z-index:1;
+}
+.down{
+    top: 0;
+    width: 1000px;
+    height: 740px;
+    background: url("../images/Castle2.png");
+    position: fixed;
+    z-index:0;
+}
+.canves{
+    width: 1000px;
+    height: 740px;
+    position: absolute;
+    top: 0;
+}
+.boom-num1{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 2;
+}
+.box-sel .box-sel-list{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin-left: 73px;
+    margin-top: 38px;
+    z-index: 2;
+}
+.btns-list{
+    font: 30px "楷体";
+    border-radius: 10px;
+    background: rgba(255,255,255,.5);
+    cursor: pointer;
+    margin-top: 20px;
+    color:black;
+}
+.talk{
+    position: absolute;
+    width: 994px;
+    height: 170px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    border: 3px solid #FFFFFF;
+    border-radius: 15px;
+}
+.head-img{
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    top: -30px;
+    left:-12px;
+    background: url("../images/Package1_6.png");
+    background-size: 250px, 200px;
+}
+.say{
+    display: block;
+    position: absolute;
+    top:15px;
+    left: 240px;
+    font:30px "楷体";
+    color: #FFFFFF;
+}
+.enemy-talk{
+    position: absolute;
+    width: 994px;
+    height: 170px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    border: 3px solid #FFFFFF;
+    border-radius: 15px;
+}
+.enemy-head-img{
+    width: 144px;
+    height: 144px;
+    position: absolute;
+    top: 12px;
+    left:10px;
+    background: url("../images/Evil.png") -144px -144px no-repeat;
+}
+.enemy-say{
+    display: block;
+    position: absolute;
+    top:15px;
+    left: 190px;
+    font:30px "楷体";
+    color: #FFFFFF;
+}
+.select{
+    position: relative;
+    float: left;
+    top:-55px;
+    left: 50px;
+    height: 301px;
+    width: 338px;
+    z-index:3;
+}
+.select button{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(116, 118, 142, 0.6);
+    border-radius: 30px;
+    font-size: 19px;
+    color: white;
+
+}
+/*100*/
+/*90*/
+.select .btn1{
+    /*top:-35px;*/
+    left: 218px;
+}
+.select .btn2{
+    top:78px;
+    left: 250px;
+}
+.select .btn3{
+    top:155px;
+    left: 250px;
+}
+.select .btn4{
+    top:235px;
+    left: 215px;
+}
+.magic{
+    /*display:none;*/
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    margin-top:-250px;
+    position: absolute;
+    width: 200px;
+    /*background: rgba(0,0,0,.4);*/
+    z-index: 10;
+}
+.magic li{
+    border: 1px solid #fff;
+    width: 150px;
+    text-align: center;
+    margin: 20px auto;
+    /*margin-bottom: 50px;*/
+    border-radius: 10px;
+    /*padding:10px 10px;*/
+
+    background: rgba(0,0,0,.6);
+}
+.magic a{
+    display: block;
+    width: 150px;
+    line-height: 40px;
+    color:white;
+    font-size: 20px;
+}

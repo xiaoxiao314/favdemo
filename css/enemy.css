@@ -1,0 +1,42 @@
+
+/*敌人*/
+.box-enemy{
+    position: relative;
+    width: 300px;
+    height: 540px;
+    z-index: 2;
+    float: right;
+    top: -109px;
+    right: 5px;
+}
+.enemy-l .enemy-img,.enemy-r .enemy-img{
+    width: 300px;
+    height: 250px;
+    position: absolute;
+}
+.enemy-l .enemy-img{
+    background: url("../images/General_m.png");
+    background-size: 300px 250px;
+    top:30px;
+}
+.enemy-r .enemy-img{
+    background: url("../images/SF_Seiryu.png");
+    background-size: 300px 250px;
+    top:245px;
+}
+.enemy-blood {
+    position: absolute;
+    width: 150px;
+    height: 20px;
+    border: 2px solid #000;
+    right: 60px;
+}
+.enemy-r .enemy-blood{
+    bottom:45px;
+}
+.enemy-bd{
+    width: 150px;
+    background-color: red;
+    float: right;
+    height: 20px;
+}

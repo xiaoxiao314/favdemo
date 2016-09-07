@@ -1,0 +1,39 @@
+
+/*玩家*/
+.box-player{
+    position: relative;
+    width: 254px;
+    height: 273px;
+    z-index: 2;
+    top:250px;
+    left: 25px;
+}
+.player-img{
+    width: 254px;
+    height: 225px;
+    background: url("../images/Actor1_4.png");
+    background-size: 254px 225px;
+    position: absolute;
+    z-index: 3;
+}
+.player-blood{
+    position: absolute;
+    width: 150px;
+    border: 2px solid #000;
+    left: 30px;
+}
+.player-bd{
+    background-color: red;
+    height: 20px;
+}
+.player-magic{
+    position: absolute;
+    width: 150px;
+    border: 2px solid #000;
+    top:25px;
+    left: 30px;
+}
+.player-md{
+    background-color: blue;
+    height: 20px;
+}
